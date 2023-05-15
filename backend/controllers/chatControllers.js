@@ -12,6 +12,8 @@ const accessChat = asyncHandler(async (req, res) => {
     if (! mongoose.Types.ObjectId.isValid(userId)) 
         return res.sendStatus(400);
     
+
+
     // console.log("works",req.user._id,userId)
     var isChat = await Chat.find({
         isGroupChat: false,
